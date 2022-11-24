@@ -1,6 +1,5 @@
 package br.com.globalhealth.estagio.patient.model.entity;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -12,7 +11,7 @@ import javax.persistence.OneToOne;
 
 @Entity
 public class Titular extends Person {
-
+	
 	@OneToMany(mappedBy = "titular", fetch = FetchType.EAGER)
 	private List<Dependente> dependentes;
 	
@@ -24,8 +23,8 @@ public class Titular extends Person {
 		super();
 	}
 
-	public Titular(LocalDateTime createdAt, LocalDateTime updatedAt, String name,  String cpf, String healthInsuranceCardNumber) {
-		super(name, cpf, healthInsuranceCardNumber);
+	public Titular(String name,  String cpf, String healthInsuranceCardNumber, boolean active) {
+		super(name, cpf, healthInsuranceCardNumber, active);
 	}
 
 	public List<Dependente> getDependentes() {

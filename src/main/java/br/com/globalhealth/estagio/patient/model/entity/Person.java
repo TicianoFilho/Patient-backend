@@ -15,15 +15,19 @@ public abstract class Person extends AppBaseEntity {
 	@Column(name = "health_insurance_card_number")
 	private String healthInsuranceCardNumber;
 	
+	@Column
+	private boolean active;
+	
 	public Person() {
 		super();
 	}	
 
-	public Person(String name, String cpf, String healthInsuranceCardNumber) {
+	public Person(String name, String cpf, String healthInsuranceCardNumber, boolean active) {
 		super();
 		this.name = name;
 		this.cpf = cpf;
 		this.healthInsuranceCardNumber = healthInsuranceCardNumber;
+		this.active = active;
 	}
 
 	public String getName() {
@@ -48,6 +52,14 @@ public abstract class Person extends AppBaseEntity {
 
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 	
 	

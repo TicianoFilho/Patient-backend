@@ -21,8 +21,8 @@ public class Dependente extends Person {
 		super();
 	}
 
-	public Dependente(String name, String cpf, String healthInsuranceCardNumber) {
-		super(name, cpf, healthInsuranceCardNumber);
+	public Dependente(String name, String cpf, String healthInsuranceCardNumber, boolean active) {
+		super(name, cpf, healthInsuranceCardNumber, active);
 	}
 
 	
