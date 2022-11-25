@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import br.com.globalhealth.estagio.patient.model.dao.TitularRepository;
 import br.com.globalhealth.estagio.patient.model.entity.Titular;
@@ -11,6 +12,7 @@ import br.com.globalhealth.estagio.patient.model.entity.form.TitularForm;
 import br.com.globalhealth.estagio.patient.service.TitularService;
 
 @Service
+@Transactional
 public class TitularServiceImpl implements TitularService {
 
 	@Autowired
