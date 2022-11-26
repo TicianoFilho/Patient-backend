@@ -25,5 +25,23 @@ public class Dependente extends Person {
 		super(name, cpf, healthInsuranceCardNumber, active);
 	}
 
+	public Titular getTitular() {
+		return titular;
+	}
+
+	public void setTitular(Titular titular) {
+		this.titular = titular;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+	
+	
+
 	
 }
